@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <your@email.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/22 11:50:24 by username          #+#    #+#             */
-/*   Updated: 2025/06/22 11:50:27 by username         ###   ########.fr       */
+/*   Created: 2025/06/24 14:56:05 by username          #+#    #+#             */
+/*   Updated: 2025/06/24 14:57:05 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-void	ft_swap(int *a, int *b)
+// #include <stdio.h>
+int	ft_str_is_uppercase(char *str)
 {
-	int	tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-
+	while (*str)
+	{
+		if (!(*str >= 'A' && *str <= 'Z'))
+		{
+			return (0);
+		}
+		str++;
+	}
+	return (1);
 }
-
-int main()
+/*
+int main(void)
 {
-	int a = 50;
-	int b = 1;
-	printf("before swap:\na: %d\nb:%d\n",a,b);
-	ft_swap(&a, &b);
-	printf("after swap:\na: %d\nb:%d\n",a,b);
-}
+	char a[] = "AAAA";
+	char b[] = "hfkdshf";
+	printf(	"%d\n", ft_str_is_uppercase(a));
+	printf(	"%d\n", ft_str_is_uppercase(b));
+
+}*/

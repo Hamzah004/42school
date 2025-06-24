@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <your@email.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/22 12:33:18 by username          #+#    #+#             */
-/*   Updated: 2025/06/22 12:34:43 by username         ###   ########.fr       */
+/*   Created: 2025/06/23 10:09:41 by username          #+#    #+#             */
+/*   Updated: 2025/06/23 10:09:44 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	ft_putstr(char *str)
 {
-	while (*str != '\0')
+	while (*str)
 	{
 		write(1, str, 1);
 		str++;
 	}
 }
-/*
+
 int main()
 {
 	char *str = "Hello from 42 school";
 	ft_putstr(str);
 
-}*/
+}

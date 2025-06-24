@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <your@email.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/22 11:50:24 by username          #+#    #+#             */
-/*   Updated: 2025/06/22 11:50:27 by username         ###   ########.fr       */
+/*   Created: 2025/06/24 15:27:00 by username          #+#    #+#             */
+/*   Updated: 2025/06/24 15:34:51 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <stdio.h>
 #include <stdio.h>
-void	ft_swap(int *a, int *b)
+int	ft_str_is_printable(char *str)
 {
-	int	tmp;
+	int	i;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= 32 && str[i] <= 127))
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
 
-int main()
+int main(void)
 {
-	int a = 50;
-	int b = 1;
-	printf("before swap:\na: %d\nb:%d\n",a,b);
-	ft_swap(&a, &b);
-	printf("after swap:\na: %d\nb:%d\n",a,b);
+	char a[] = "AAAA";
+	char b[] = "hfkdshf";
+	printf(	"%d\n", ft_str_is_printable(a));
+	printf(	"%d\n", ft_str_is_printable(b));
+
 }
