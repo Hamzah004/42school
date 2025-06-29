@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <your@email.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 15:27:00 by username          #+#    #+#             */
-/*   Updated: 2025/06/24 15:34:51 by username         ###   ########.fr       */
+/*   Created: 2025/06/24 20:45:58 by username          #+#    #+#             */
+/*   Updated: 2025/06/24 20:52:15 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_str_is_printable(char *str)
+char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
 	i = 0;
+	str[0] -= 32;
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 32 && str[i] <= 127))
+		if (str[i] == ' ' || str[i] == ',' || str[i] == '-' || str[i] == '+')
 		{
-			return (0);
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+			{
+				str[i + 1] -= 32;
+			}
 		}
 		i++;
 	}
-	return (1);
+	return (str);
 }
 /*
-int main(void)
+int	main()
 {
-	char a[] = "AAAA";
-	char b[] = "hfkdshf";
-	printf(	"%d\n", ft_str_is_printable(a));
-	printf(	"%d\n", ft_str_is_printable(b));
-
+	char string[] = "hi, how are you? 42words forty-two; fifty+and+one";
+	ft_strcapitalize(string);
+	printf("%s", string);
 }*/

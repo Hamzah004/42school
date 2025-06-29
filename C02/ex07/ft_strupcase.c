@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <your@email.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 15:27:00 by username          #+#    #+#             */
-/*   Updated: 2025/06/24 15:34:51 by username         ###   ########.fr       */
+/*   Created: 2025/06/24 19:39:33 by username          #+#    #+#             */
+/*   Updated: 2025/06/24 19:40:06 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_str_is_printable(char *str)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 32 && str[i] <= 127))
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			return (0);
+			str[i] -= 32;
 		}
 		i++;
 	}
-	return (1);
+	return (str);
 }
 /*
-int main(void)
-{
-	char a[] = "AAAA";
-	char b[] = "hfkdshf";
-	printf(	"%d\n", ft_str_is_printable(a));
-	printf(	"%d\n", ft_str_is_printable(b));
-
+int main()
+{	char a[] = "rama";
+	printf("%s", ft_strupcase(a));
 }*/
