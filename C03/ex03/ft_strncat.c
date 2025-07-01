@@ -1,36 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftstrcmp.c                                         :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbani-at <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/30 16:01:30 by hbani-at          #+#    #+#             */
-/*   Updated: 2025/06/30 16:02:22 by hbani-at         ###   ########.fr       */
+/*   Created: 2025/06/30 16:16:21 by hbani-at          #+#    #+#             */
+/*   Updated: 2025/06/30 16:22:16 by hbani-at         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_strcmp(char *s1, char *s2)
+
+int	ft_strlen(char *str);
+
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	dest_size;
 
 	i = 0;
-	while (s1[i] || s2[i])
+	dest_size = ft_strlen(dest);
+	while (src[i] && i < nb)
 	{
-		if (!(s1[i] - s2[i] == 0))
-			return (s1[i] - s2[i]);
+		dest[dest_size + i] = src[i];
 		i++;
 	}
-	return (0);
+	dest[dest_size + i] = '\0';
+	return (dest);
 }
 /*
 int main() {
 
-	char arr1[] = "abcd", arr2[] = "abc";
-	int result;
-
-	result = ft_strcmp(arr1,arr2);
-	printf("%d\n", result);
+	char src[] = "world", dest[] = "hello ";
+	ft_strncat(dest,src, 1);
+	printf(	"%s", dest);
   return 0;
-}*/
+}
+*/
+
+int	ft_strlen(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
+}
