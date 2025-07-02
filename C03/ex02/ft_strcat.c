@@ -38,6 +38,7 @@ int main() {
   return 0;
 }
 */
+
 int	ft_strlen(char *str)
 {
 	int	i;
