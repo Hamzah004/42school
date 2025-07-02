@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 int	ft_strlen(char *str);
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
@@ -22,7 +21,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 	i = 0;
 	dest_length = ft_strlen(dest);
-	src_size = ft_strlen(dest);
+	src_size = ft_strlen(src);
 	space_left = (size - dest_length - 1);
 	if (dest_length <= size)
 	{
@@ -30,18 +29,19 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	}
 	while ((i < space_left) && src[i])
 	{
-		dest[size + i] = src[i];
+		dest[dest_length + i] = src[i];
 		i++;
 	}
-	dest[size + i] = '\0';
-	return (dest_length);
+	dest[dest_length + i] = '\0';
+	return (dest_length + src_size);
 }
 /*
 int	main()
 {
-	char src[] = "this";
+	char src[] = "is";
 	char dest[] = "hello";
-	printf(	"%u", ft_strlcat(dest, src, 3));
+	printf(	"%u\n", ft_strlcat(dest, src, 1));
+	printf(	"%lu\n", strlcat(dest, src, 1));
 
 }
 */

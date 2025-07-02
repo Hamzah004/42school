@@ -11,63 +11,36 @@
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_strlen(char *str);
-int	to_find_start(char *str, char *to_find);
-
 char	*ft_strstr(char *str, char *to_find)
-{
-	int	n;
-
-	n = to_find_start(str, to_find);
-	if (n != 0)
-		return (str + n);
-	else
-		return (0);
-}
-/*
-int main()
-{	char str1[] = "my name is hamzah";
-	char str2[] = "name";
-		printf("%s", ft_strstr(str1, str2));
-}
-*/
-
-int	ft_strlen(char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
-int	to_find_start(char *str, char *to_find)
 {
 	int	i;
 	int	j;
-	int	size;
 
 	i = 0;
-	size = ft_strlen(to_find);
-	while (str[i])
+	if (*to_find == '\0')
+	{
+		return (str);
+	}
+	while (str[i] != '\0')
 	{
 		j = 0;
-		while (to_find[j])
+		while (to_find[j] != '\0' && (str[i + j] == to_find[j]))
 		{
-			if (!(str[i + j] == to_find[j]))
-			{
-				break ;
-			}
 			j++;
 		}
-		if (j == size)
+		if (to_find[j] == '\0')
 		{
-			return (i);
+			return (&str[i]);
 		}
 		i++;
 	}
 	return (0);
 }
+/*
+int main()
+{	char str1[] = "this is name";
+	char str2[] = "name";
+
+		printf("me : %s\n", ft_strstr(str1, str2));
+		printf("standard: %s\n", strstr(str1, str2));
+}*/

@@ -37,7 +37,7 @@ int main() {
 	printf(	"%s", dest);
   return 0;
 }
-
+*/
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -48,4 +48,4 @@ int	ft_strlen(char *str)
 		i++;
 	}
 	return (i);
-}*/
+}
