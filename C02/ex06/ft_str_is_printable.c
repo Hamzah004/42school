@@ -6,7 +6,7 @@
 /*   By: username <your@email.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:27:00 by username          #+#    #+#             */
-/*   Updated: 2025/06/24 15:34:51 by username         ###   ########.fr       */
+/*   Updated: 2025/07/01 17:39:11 by hbani-at         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 32 && str[i] <= 127))
+		if (!(str[i] >= 32 && str[i] <= 126))
 		{
 			return (0);
 		}
