@@ -20,10 +20,10 @@ void	ft_putstr(char *str)
 		str++;
 	}
 }
-
+/*
 int main()
 {
 	char *str = "Hello from 42 school";
 	ft_putstr(str);
 
-}
+}*/

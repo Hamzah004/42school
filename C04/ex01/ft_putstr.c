@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <your@email.com>                  +#+  +:+       +#+        */
+/*   By: hbani-at <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/22 11:50:24 by username          #+#    #+#             */
-/*   Updated: 2025/06/22 11:50:27 by username         ###   ########.fr       */
+/*   Created: 2025/07/02 02:43:51 by hbani-at          #+#    #+#             */
+/*   Updated: 2025/07/02 02:47:40 by hbani-at         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-void	ft_swap(int *a, int *b)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	int	tmp;
+	int	i;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		str++;
+	}
 }
 /*
 int main()
 {
-	int a = 50;
-	int b = 1;
-	printf("before swap:\na: %d\nb:%d\n",a,b);
-	ft_swap(&a, &b);
-	printf("after swap:\na: %d\nb:%d\n",a,b);
+	ft_putstr("this is hamzah");
 }*/

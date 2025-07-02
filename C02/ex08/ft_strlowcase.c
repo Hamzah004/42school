@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <your@email.com>                  +#+  +:+       +#+        */
+/*   By: hbani-at <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 19:39:33 by username          #+#    #+#             */
-/*   Updated: 2025/06/24 19:40:06 by username         ###   ########.fr       */
+/*   Created: 2025/07/01 23:25:54 by hbani-at          #+#    #+#             */
+/*   Updated: 2025/07/01 23:25:56 by hbani-at         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-char	*ft_strlowercase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
@@ -29,5 +28,5 @@ char	*ft_strlowercase(char *str)
 /*
 int main()
 {	char a[] = "RAMA";
-	printf("%s", ft_strlowercase(a));
+	printf("%s", ft_strlowcase(a));
 }*/

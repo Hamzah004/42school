@@ -1,5 +1,14 @@
-#include <stdint.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbani-at <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/02 01:18:32 by hbani-at          #+#    #+#             */
+/*   Updated: 2025/07/02 01:18:38 by hbani-at         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 unsigned int	get_size(char *src)
 {
@@ -29,7 +38,7 @@ unsigned int    ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (get_size(src));
 }
-
+/*
 int main(void)
 {
     char src[] = "hamzah from 42";
@@ -37,4 +46,4 @@ int main(void)
     printf("the size is: %d\n",ft_strlcpy(dest,src,5));
     printf("dest: %s", dest);
 
-}
+}*/
