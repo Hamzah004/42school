@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbani-at <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 16:14:57 by hbani-at          #+#    #+#             */
-/*   Updated: 2025/07/03 16:14:58 by hbani-at         ###   ########.fr       */
+/*   Created: 2025/07/03 02:22:17 by hbani-at          #+#    #+#             */
+/*   Updated: 2025/07/03 02:22:18 by hbani-at         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	main(int argc, char **argv)
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	args;
 
-void	ft_putnbr(int nb)
-{
-	long int	n;
-
-	n = nb;
-	if (n < 0)
+	i = 0;
+	args = argc;
+	while (args >= 1)
 	{
-		ft_putchar('-');
-		n *= -1;
+		i = 0;
+		while (argv[args][i])
+		{
+			write(1, &(argv[args][i]), 1);
+			i++;
+		}
+		args--;
 	}
-	if (n >= 1 && n <= 9)
-		ft_putchar(n + '0');
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
+	write(1, "\n", 1);
+	return (0);
 }
-/*
-int	main(void)
-{
-		ft_putnbr(-1234);
-}*/

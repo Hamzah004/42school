@@ -26,7 +26,7 @@ char	*ft_strcpy(char *dest, char *src)
 }
 
 /*
-int main()
+int	main(void)
 {
 	char src[] = "this is me";
 	char dest[] = "";

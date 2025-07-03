@@ -5,38 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbani-at <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 16:14:57 by hbani-at          #+#    #+#             */
-/*   Updated: 2025/07/03 16:14:58 by hbani-at         ###   ########.fr       */
+/*   Created: 2025/07/02 19:07:16 by hbani-at          #+#    #+#             */
+/*   Updated: 2025/07/02 19:07:18 by hbani-at         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_putnbr(int nb)
 {
-	long int	n;
+	char	arr[10];
+	int		i;
 
-	n = nb;
-	if (n < 0)
+	i = 0;
+	if (nb == -2147483648)
+		write(1, "-2147483648", 11);
+	else if (nb < 0)
 	{
-		ft_putchar('-');
-		n *= -1;
+		write(1, "-", 1);
+		nb *= -1;
 	}
-	if (n >= 1 && n <= 9)
-		ft_putchar(n + '0');
-	if (n > 9)
+	while (nb > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		arr[i] = (nb % 10) + '0';
+		nb = nb / 10;
+		i++;
+	}
+	if (nb <= 9 && nb != -2147483648)
+		arr[i] = nb + '0';
+	while (arr[i] != '\0')
+	{
+		write(1, &arr[i], 1);
+		i--;
 	}
 }
 /*
-int	main(void)
+int main(void)
 {
-		ft_putnbr(-1234);
+	int a = 0;
+	ft_putnbr(a);
 }*/
