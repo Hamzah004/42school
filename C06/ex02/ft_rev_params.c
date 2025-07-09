@@ -15,20 +15,20 @@
 int	main(int argc, char **argv)
 {
 	int	i;
-	int	args;
+	int	arg;
 
 	i = 0;
-	args = argc;
-	while (args >= 1)
+	arg = argc - 1;
+	while (arg >= 1)
 	{
 		i = 0;
-		while (argv[args][i])
+		while (argv[arg][i])
 		{
-			write(1, &(argv[args][i]), 1);
+			write(1, &(argv[arg][i]), 1);
 			i++;
 		}
-		args--;
+		arg--;
+		write(1, "\n", 1);
 	}
-	write(1, "\n", 1);
 	return (0);
 }
