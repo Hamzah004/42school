@@ -29,6 +29,8 @@ int main() {
 
 	char arr1[] = "abcd", arr2[] = "abc";
 	int result;
+	int x = 1;
+	printf("%lu\n", sizeof(x));
 
 	result = ft_strcmp(arr1,arr2);
 	printf("%d\n", result);

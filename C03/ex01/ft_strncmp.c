@@ -25,12 +25,12 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (0);
 }
 /*
-int main()
+int	main(void)
 {
-	char arr1[] = "a", arr2[] = "af";
-	int result;
+	char	arr1[] = "a", arr2[] = "af";
+	int		result;
 
-	result = ft_strncmp(arr1,arr2,2);
+	result = ft_strncmp(arr1, arr2, 2);
 	printf("%d\n", result);
-  return 0;
+	return (0);
 }*/

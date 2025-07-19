@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <your@email.com>                  +#+  +:+       +#+        */
+/*   By: yabu-sha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 14:52:06 by username          #+#    #+#             */
-/*   Updated: 2025/06/24 14:53:14 by username         ###   ########.fr       */
+/*   Created: 2025/07/04 14:58:11 by yabu-sha          #+#    #+#             */
+/*   Updated: 2025/07/05 23:24:08 by yabu-sha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "rush.h"
 
-// #include <stdio.h>
-int	ft_str_is_lowercase(char *str)
+void	number_argument(char *num);
+
+int	main(int argc, char *argv[])
 {
-	while (*str)
+	if (argc == 2)
 	{
-		if (!(*str >= 'a' && *str <= 'z'))
-		{
-			return (0);
-		}
-		str++;
+		number_argument(argv[1]);
 	}
-	return (1);
+	else if (argc == 3)
+	{
+		// dir_Argument(argv[1], argv[2]);
+	}
+	else
+		write(1, "Error\n", 7);
 }
-/*
-int main(void)
-{
-	char a[] = "asddjfhh";
-	printf(	"%d", ft_str_is_lowercase(a));
-
-}*/

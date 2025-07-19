@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
 int	ft_iterative_factorial(int nb)
 {
@@ -26,11 +26,11 @@ int	ft_iterative_factorial(int nb)
 	}
 	return (result);
 }
-/*
+
 int	main(void)
 {
 	int	x;
 
 	x = 5;
 	printf("%d", ft_iterative_factorial(x));
-}*/
+}

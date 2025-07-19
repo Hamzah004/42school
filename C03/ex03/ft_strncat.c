@@ -34,7 +34,7 @@ int main() {
 
 	char src[] = "world", dest[] = "hello ";
 	ft_strncat(dest,src, 1);
-	printf(	"%s", dest);
+	printf(	"%s\n", dest);
   return 0;
 }
 */

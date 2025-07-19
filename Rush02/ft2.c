@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft2.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <your@email.com>                  +#+  +:+       +#+        */
+/*   By: yazen <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 14:52:06 by username          #+#    #+#             */
-/*   Updated: 2025/06/24 14:53:14 by username         ###   ########.fr       */
+/*   Created: 2025/07/05 07:37:54 by yazen             #+#    #+#             */
+/*   Updated: 2025/07/05 21:40:27 by yabu-sha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-int	ft_str_is_lowercase(char *str)
+int	ft_strlen(char *str)
 {
-	while (*str)
-	{
-		if (!(*str >= 'a' && *str <= 'z'))
-		{
-			return (0);
-		}
-		str++;
-	}
-	return (1);
-}
-/*
-int main(void)
-{
-	char a[] = "asddjfhh";
-	printf(	"%d", ft_str_is_lowercase(a));
+	int	i;
 
-}*/
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+int	ft_power(int n, int p)
+{
+	int	pow;
+	int	i;
+
+	pow = 1;
+	i = 0;
+	while (i < p)
+	{
+		pow = pow * n;
+		i++;
+	}
+	if (p < 0)
+		return (1 / pow);
+	return (pow);
+}

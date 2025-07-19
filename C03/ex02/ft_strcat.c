@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 // #include <stdio.h>
-
 int	ft_strlen(char *str);
 
 char	*ft_strcat(char *dest, char *src)
@@ -34,7 +33,7 @@ int main() {
 
 	char src[] = "world", dest[] = "hello ";
 	ft_strcat(dest,src);
-	printf(	"%s", dest);
+	printf(	"%s\n", dest);
   return 0;
 }
 */

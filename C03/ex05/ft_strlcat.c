@@ -42,8 +42,8 @@ int	main()
 {
 	char src[] = "is";
 	char dest[] = "hello";
-	printf(	"%u\n", ft_strlcat(dest, src, 1));
-	printf(	"%lu\n", strlcat(dest, src, 1));
+	printf(	"me: %u\n", ft_strlcat(dest, src, 1));
+	printf(	"standard: %lu\n", strlcat(dest, src, 1));
 
 }
 */
